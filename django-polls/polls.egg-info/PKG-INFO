@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: polls
-Version: 0.0.0
-Requires-Dist: djangorestframework
-Requires-Dist: django-filter
-Requires-Dist: django-cors-headers==3.10.0
-Requires-Dist: django-crispy-forms==1.12.0
