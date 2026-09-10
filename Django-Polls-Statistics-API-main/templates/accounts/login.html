@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Авторизация{% endblock %}
+{% load socialaccount %}
+{% block content %}
+    <h1>Авторизация</h1>
+    <button class="btn btn-outline-info">
+        <a href="{% provider_login_url 'google'%}?next=/">
+            <i class="fab fa-google"></i>
+            Login with Google
+        </a>
+    </button>
+    <form action="" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><a href="{% url "register" %}">Нет аккаунта?</a></p>
+        <p><a href="{% url "password_reset" %}">Забыли пароль?</a></p>
+        <p><input type="submit" value="Login"></p>
+    </form>
+{% endblock %}
